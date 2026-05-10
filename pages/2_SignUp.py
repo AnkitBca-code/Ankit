@@ -44,7 +44,7 @@ def get_data():
        st.write(dob)
        st.write(co)
        #st.write(str1)
-       conn=pymongo.MongoClient("mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.2")
+       conn=pymongo.MongoClient("mongodb+srv://lalanprasadgupta726097_db_user:Cmy8ddC5RHQ3Ymmc@cluster0.ussmgak.mongodb.net/?appName=Cluster0")
        mydb=conn["news"]
        my=mydb["user_info"]
        my.insert_one({"username":name,"password":Password,"course":c,"gender":g,"address":address,"dob":str(dob),"color":co})
