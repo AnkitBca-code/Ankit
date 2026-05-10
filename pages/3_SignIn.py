@@ -23,7 +23,7 @@ st.title("SignIn")
 t1=st.text_input("Username")
 t2=st.text_input("Password")
 if st.button("SIGNIN"):
-       conn=pymongo.MongoClient("mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.2")
+       conn=pymongo.MongoClient("mongodb+srv://lalanprasadgupta726097_db_user:Cmy8ddC5RHQ3Ymmc@cluster0.ussmgak.mongodb.net/?appName=Cluster0")
        mydb=conn["news"]
        my=mydb["user_info"]
        res=my.find({"username":t1,"password":t2})
