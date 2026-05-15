@@ -81,7 +81,7 @@ if st.button("🚀 Sign In"):
 
     # DATABASE CONNECTION
     conn = pymongo.MongoClient(
-        "mongodb+srv://lalanprasadgupta726097_db_user:Ankit%40123456@cluster0.ussmgak.mongodb.net/?appName=Cluster0"
+        "mongodb+srv://lalanprasadgupta726097_db_user:Cmy8ddC5RHQ3Ymmc@cluster0.ussmgak.mongodb.net/?appName=Cluster0"
     )
 
     mydb = conn["news"]
