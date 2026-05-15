@@ -100,8 +100,6 @@ if st.button("🚀 Sign In"):
 
         st.success("Login Successful ✅")
 
-        st.balloons()
-
         time.sleep(1)
 
         st.switch_page("pages/4_profile.py")
