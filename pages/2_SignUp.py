@@ -107,7 +107,7 @@ def get_data():
 
         # DATABASE CONNECTION
         conn = pymongo.MongoClient(
-            "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.2"
+            "mongodb+srv://lalanprasadgupta726097_db_user:Ankit%40123456@cluster0.ussmgak.mongodb.net/?appName=Cluster0"
         )
 
         mydb = conn["news"]
