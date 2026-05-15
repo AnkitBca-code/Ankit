@@ -71,3 +71,11 @@ with col2:
     st.markdown("### ❌ Fake News")
     st.write("Scientists confirm humans can live without sleep for 30 days.")
     st.markdown('</div>', unsafe_allow_html=True)
+
+
+# ---------------- FOOTER ----------------
+st.markdown("---")
+st.markdown(
+    "<center>Made with ❤️ using Streamlit & AI</center>",
+    unsafe_allow_html=True
+)
