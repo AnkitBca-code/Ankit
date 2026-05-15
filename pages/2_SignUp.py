@@ -107,7 +107,7 @@ def get_data():
 
         # DATABASE CONNECTION
         conn = pymongo.MongoClient(
-            mongodb+srv://lalanprasadgupta726097_db_user:Cmy8ddC5RHQ3Ymmc@cluster0.ussmgak.mongodb.net/?appName=Cluster0
+            "mongodb+srv://lalanprasadgupta726097_db_user:Cmy8ddC5RHQ3Ymmc@cluster0.ussmgak.mongodb.net/?appName=Cluster0"
 
         )
 
