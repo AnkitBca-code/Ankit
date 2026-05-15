@@ -104,7 +104,7 @@ if st.button("🚀 Sign In"):
 
         time.sleep(1)
 
-        st.switch_page("pages/pro.py")
+        st.switch_page("pages/4_profile.py")
 
     if v == 0:
         st.error("Invalid Username or Password ❌")
