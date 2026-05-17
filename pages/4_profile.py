@@ -5,8 +5,8 @@ import pymongo
 import pickle
 
 # LOAD MODEL
-model = pickle.load(open("model.pkl", "rb"))
-vector = pickle.load(open("vector.pkl", "rb"))
+model = pickle.load(open("../model.pkl", "rb"))
+vector = pickle.load(open("../vector.pkl", "rb"))
 
 
 # DATABASE CONNECTION
