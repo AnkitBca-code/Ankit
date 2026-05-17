@@ -2,6 +2,12 @@ import streamlit as st
 import time
 import pymongo
 
+import pickle
+
+# LOAD MODEL
+model = pickle.load(open("model.pkl", "rb"))
+vector = pickle.load(open("vector.pkl", "rb"))
+
 
 # DATABASE CONNECTION
 conn = pymongo.MongoClient(
@@ -132,12 +138,37 @@ if 'username' in st.session_state:
                 st.write(f"📧 Email : {data['email']}")
 
     # FAKE NEWS DETECTION SYSTEM
+    # FAKE NEWS DETECTION SYSTEM
+        # FAKE NEWS DETECTION SYSTEM
     with c3:
 
-        if st.button("📰 Fake News Detection"):
+        st.subheader("📰 Fake News Detection")
 
-            pass
+        news = st.text_area(
+            "Enter News Content"
+        )
 
+        if st.button("Detect News"):
+
+            if news == "":
+
+                st.warning("Please Enter News ❗")
+
+            else:
+
+                transform_text = vector.transform([news])
+
+                prediction = model.predict(transform_text)
+
+                if prediction[0] == "FAKE":
+
+                    st.error("❌ Fake News Detected")
+
+                else:
+
+                    st.success("✅ Real News")
+
+                st.info("AI Analysis Completed")
 else:
 
     st.error("Please Login First ❌")
