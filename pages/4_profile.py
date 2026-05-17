@@ -3,10 +3,15 @@ import time
 import pymongo
 
 import pickle
+import os
 
-# LOAD MODEL
-model = pickle.load(open("../model.pkl", "rb"))
-vector = pickle.load(open("../vector.pkl", "rb"))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+model_path = os.path.join(BASE_DIR, "model.pkl")
+vector_path = os.path.join(BASE_DIR, "vector.pkl")
+
+model = pickle.load(open(model_path, "rb"))
+vector = pickle.load(open(vector_path, "rb"))
 
 
 # DATABASE CONNECTION
