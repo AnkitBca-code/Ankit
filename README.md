@@ -41,7 +41,7 @@ Our mission is to:
 ---
 
 ## 🤖 Fake News Detection
-![Detection](fake_news.png)
+![Detection](Fake_News.png)
 
 -----
 
@@ -60,12 +60,17 @@ Our mission is to:
 ---
 
 # 🛠 Technologies Used
-
-- Python  
-- Streamlit  
-- MongoDB  
-- Scikit-learn  
-- Pandas
+Python — Main programming language
+Streamlit — Frontend web application framework
+MongoDB Atlas — Cloud database storage
+PyMongo — MongoDB connectivity with Python
+Machine Learning — Fake news prediction model
+Scikit-learn — ML model training and prediction
+Pickle — Model and vector file serialization
+TF-IDF Vectorizer — Text feature extraction
+HTML/CSS — UI styling and customization
+Git & GitHub — Version control and deployment
+Streamlit Cloud — Cloud hosting and deployment
 
   -----
 
