@@ -81,7 +81,7 @@ if 'username' in st.session_state:
 
     st.success(f"Welcome: {st.session_state['username']}")
 
-    c1, c2, c3 = st.columns(3)
+    c1, c2 = st.columns(2)
 
     # CHANGE PASSWORD
     with c1:
@@ -145,35 +145,39 @@ if 'username' in st.session_state:
     # FAKE NEWS DETECTION SYSTEM
     # FAKE NEWS DETECTION SYSTEM
         # FAKE NEWS DETECTION SYSTEM
-    with c3:
+   # FAKE NEWS DETECTION SYSTEM
 
-        st.subheader("📰 Fake News Detection")
+st.markdown("---")
 
-        news = st.text_area(
-            "Enter News Content"
-        )
+st.subheader("📰 Fake News Detection System")
 
-        if st.button("Detect News"):
+news = st.text_area(
+    "Enter News Content",
+    height=250
+)
 
-            if news == "":
+if st.button("Detect News"):
 
-                st.warning("Please Enter News ❗")
+    if news == "":
 
-            else:
+        st.warning("Please Enter News ❗")
 
-                transform_text = vector.transform([news])
+    else:
 
-                prediction = model.predict(transform_text)
+        transform_text = vector.transform([news])
 
-                if prediction[0] == "FAKE":
+        prediction = model.predict(transform_text)
 
-                    st.error("❌ Fake News Detected")
+        if prediction[0] == "FAKE":
 
-                else:
+            st.error("❌ Fake News Detected")
 
-                    st.success("✅ Real News")
+        else:
 
-                st.info("AI Analysis Completed")
+            st.success("✅ Real News")
+
+        st.info("AI Analysis Completed")
+    
 else:
 
     st.error("Please Login First ❌")
