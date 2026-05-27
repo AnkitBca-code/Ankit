@@ -117,6 +117,7 @@ if 'username' in st.session_state:
                     st.success("Password Changed Successfully ✅")
 
                 else:
+
                     st.error("Old Password Incorrect ❌")
 
     # PROFILE DETAILS
@@ -131,53 +132,48 @@ if 'username' in st.session_state:
             for data in res:
 
                 st.write(f"🆔 Username : {data['username']}")
-
                 st.write(f"📧 Password : {data['password']}")
-
                 st.write(f"🎭 Role : {data['role']}")
-
                 st.write(f"🏠 Address : {data['address']}")
-
                 st.write(f"📅 DOB : {data['dob']}")
-
                 st.write(f"📧 Email : {data['email']}")
 
     # FAKE NEWS DETECTION SYSTEM
-    # FAKE NEWS DETECTION SYSTEM
-        # FAKE NEWS DETECTION SYSTEM
-   # FAKE NEWS DETECTION SYSTEM
 
-st.markdown("---")
+    st.markdown("---")
 
-st.subheader("📰 Fake News Detection System")
+    st.subheader("📰 Fake News Detection System")
 
-news = st.text_area(
-    "Enter News Content",
-    height=250
-)
+    news = st.text_area(
+        "Enter News Content",
+        height=250
+    )
 
-if st.button("Detect News"):
+    if st.button("Detect News"):
 
-    if news == "":
+        if news == "":
 
-        st.warning("Please Enter News ❗")
-
-    else:
-
-        transform_text = vector.transform([news])
-
-        prediction = model.predict(transform_text)
-
-        if prediction[0] == "FAKE":
-
-            st.error("❌ Fake News Detected")
+            st.warning("Please Enter News ❗")
 
         else:
 
-            st.success("✅ Real News")
+            transform_text = vector.transform([news])
 
-        st.info("AI Analysis Completed")
-    
+            prediction = model.predict(transform_text)
+
+            if prediction[0] == "FAKE":
+
+                st.error("❌ Fake News Detected")
+
+            else:
+
+                st.success("✅ Real News")
+
+            st.info("AI Analysis Completed")
+
 else:
 
     st.error("Please Login First ❌")
+
+
+
