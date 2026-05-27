@@ -41,7 +41,7 @@ Our mission is to:
 ---
 
 ## 🤖 Fake News Detection
-![Detection](Fake_News.png)
+![Detection](Fake_news.png)
 
 -----
 
